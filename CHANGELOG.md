@@ -7,6 +7,13 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-08-30
+
+- Publish PEP 639 license metadata with the `Apache-2.0` SPDX expression and
+  include `LICENSE` and `NOTICE` in wheel and source distribution metadata.
+- Update the pinned `actions/setup-python` dependency to v7.0.0 and link the
+  project naturally to the Fillbyte organization.
+
 ## [1.0.5] - 2026-08-30
 
 - Publish the JSON report schema at its canonical Pages `$id` and verify the

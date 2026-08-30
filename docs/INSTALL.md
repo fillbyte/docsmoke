@@ -12,7 +12,7 @@ docsmoke --help
 Use an exact pin when you need reproducible local or CI installs:
 
 ```bash
-pipx install docsmoke==1.0.5
+pipx install docsmoke==1.0.6
 ```
 
 ## Inside a virtual environment
@@ -44,11 +44,11 @@ Tagged releases publish GHCR images:
 ```bash
 docker pull ghcr.io/fillbyte/docsmoke:latest
 docker run --rm -v "$PWD:/work" -w /work \
-    ghcr.io/fillbyte/docsmoke:1.0.5 scan README.md docs examples
+    ghcr.io/fillbyte/docsmoke:1.0.6 scan README.md docs examples
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line,
-or `:1.0.5` for a fully pinned container.
+or `:1.0.6` for a fully pinned container.
 
 Release tags publish native `linux/amd64` and `linux/arm64` images. Docker
 therefore selects an Apple Silicon-compatible image without x86 emulation.
@@ -63,7 +63,7 @@ therefore selects an Apple Silicon-compatible image without x86 emulation.
 ```
 
 Use `@v1` for compatible fixes on the `1.x` action line or
-`@v1.0.5` for an exact action revision.
+`@v1.0.6` for an exact action revision.
 
 ## macOS note
 
