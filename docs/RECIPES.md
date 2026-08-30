@@ -30,7 +30,7 @@ The repository ships a reusable action at the repo root:
 ```
 
 Use `@v1` for the stable major line, or pin an exact action version
-such as `@v1.0.0` when you want fully reproducible workflow inputs.
+such as `@v1.0.2` when you want fully reproducible workflow inputs.
 
 ## Pull request report artifact
 
@@ -49,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Install docsmoke
-        run: python -m pip install docsmoke==1.0.0
+        run: python -m pip install docsmoke==1.0.2
       - name: Scan docs
         run: |
           mkdir -p reports
@@ -108,11 +108,11 @@ installation:
 
 ```bash
 docker run --rm -v "$PWD:/work" -w /work \
-    ghcr.io/fillbyte/docsmoke:1.0.0 scan README.md docs examples
+    ghcr.io/fillbyte/docsmoke:1.0.2 scan README.md docs examples
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line, or
-`:1.0.0` for a fully pinned container.
+`:1.0.2` for a fully pinned container.
 
 ## JSON report consumers
 

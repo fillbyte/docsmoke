@@ -4,6 +4,7 @@ import json
 
 from typer.testing import CliRunner
 
+from docsmoke import __version__
 from docsmoke.cli import _resolve_config, app
 
 runner = CliRunner()
@@ -54,7 +55,7 @@ def test_version_flag() -> None:
     result = runner.invoke(app, ["--version"])
 
     assert result.exit_code == 0
-    assert "docsmoke 1.0.0" in result.stdout
+    assert f"docsmoke {__version__}" in result.stdout
 
 
 def test_scan_rejects_unknown_output_format(tmp_path) -> None:

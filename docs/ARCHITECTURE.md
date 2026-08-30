@@ -39,10 +39,10 @@ layers:
 
 The project has four distribution surfaces:
 
-- PyPI package: `docsmoke==1.0.0`
-- GitHub Release assets: `v1.0.0`
-- GHCR images: `1.0.0`, `1.0`, `1`, and `latest`
-- GitHub Action refs: `v1.0.0` and moving `v1`
+- PyPI package: `docsmoke==1.0.2`
+- GitHub Release assets: `v1.0.2`
+- GHCR images: `1.0.2`, `1.0`, `1`, and `latest`
+- GitHub Action refs: `v1.0.2` and moving `v1`
 
 The release workflow builds the Python distributions once, generates a
 CycloneDX SBOM, signs the distributions with Sigstore, publishes GHCR

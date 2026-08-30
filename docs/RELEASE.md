@@ -13,14 +13,14 @@ pushed.
 
 `docsmoke` uses two related but different versioning surfaces:
 
-- **Package release tags** such as `v1.0.0` are immutable release
+- **Package release tags** such as `v1.0.2` are immutable release
   markers for the Python package, GitHub Release assets, SBOMs,
   signatures, and GHCR image tags.
 - **Major action tags** such as `v1` are moving compatibility tags for
   the reusable GitHub Action. `v1` points to the latest compatible
-  `1.x` release, not specifically to `v1.0.0`.
+  `1.x` release, not specifically to `v1.0.2`.
 
-For example, after `v1.0.0` is released, both `v1.0.0` and `v1` point
+For example, after `v1.0.2` is released, both `v1.0.2` and `v1` point
 to the same release commit. Users can choose:
 
 ```yaml
@@ -28,29 +28,29 @@ to the same release commit. Users can choose:
 uses: fillbyte/docsmoke@v1
 
 # Pins the exact action release for maximum reproducibility.
-uses: fillbyte/docsmoke@v1.0.0
+uses: fillbyte/docsmoke@v1.0.2
 ```
 
 This follows GitHub's documented action-maintenance guidance: create
-semantic version tags such as `v1.0.0` and keep major tags such as `v1`
+semantic version tags such as `v1.0.2` and keep major tags such as `v1`
 current with the latest compatible release.
 
-## Why `1`, `1.0`, `1.0.0`, `v1`, and `v1.0.0` all exist
+## Why `1`, `1.0`, `1.0.2`, `v1`, and `v1.0.2` all exist
 
 The same release is named differently depending on where users consume
 it:
 
 | Surface | Example | Meaning |
 | ------- | ------- | ------- |
-| PyPI package | `1.0.0` | Exact Python package version installed by `pip` or `pipx`. |
-| GitHub Release tag | `v1.0.0` | Exact release commit and assets. The `v` prefix is a Git tag convention. |
+| PyPI package | `1.0.2` | Exact Python package version installed by `pip` or `pipx`. |
+| GitHub Release tag | `v1.0.2` | Exact release commit and assets. The `v` prefix is a Git tag convention. |
 | GitHub Action tag | `v1` | Moving major tag for the latest compatible `1.x` action release. |
-| GHCR image tag | `1.0.0` | Exact container image for one release. |
+| GHCR image tag | `1.0.2` | Exact container image for one release. |
 | GHCR image tag | `1.0` | Moving image tag for the latest compatible `1.0.x` patch. |
 | GHCR image tag | `1` | Moving image tag for the latest compatible `1.x` image. |
 | GHCR image tag | `latest` | Convenience image tag for the newest stable release. |
 
-So `v1` does not mean "the original `v1.0.0` forever." It means "the
+So `v1` does not mean "the original `v1.0.2` forever." It means "the
 latest compatible release on the `1.x` line." After the next compatible
 release, it is normal for `v1` to point at the same commit as that
 newest exact tag.
@@ -64,7 +64,7 @@ Each tagged release publishes four surfaces:
 - **GitHub Releases**: wheel, sdist, CycloneDX SBOM, and Sigstore
   bundles.
 - **GHCR**: container tags for `latest`, major, major/minor, and exact
-  version, for example `latest`, `1`, `1.0`, and `1.0.0`.
+  version, for example `latest`, `1`, `1.0`, and `1.0.2`.
 - **GitHub Action**: the repository root `action.yml`, consumed through
   `uses: fillbyte/docsmoke@...`.
 
@@ -138,7 +138,7 @@ git push origin refs/tags/v1 --force
 ```
 
 Force-updating `v1` is expected because it is a moving compatibility
-tag. Exact tags such as `v1.0.0` should only be moved to recover from a
+tag. Exact tags such as `v1.0.2` should only be moved to recover from a
 failed release before users depend on it; normal releases should create
 a new exact tag.
 

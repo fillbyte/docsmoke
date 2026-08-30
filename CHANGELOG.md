@@ -7,6 +7,14 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-08-30
+
+- Updated the pinned PyPI publisher action to support Core Metadata 2.5.
+- Added a dedicated Buildx builder and enabled maximum provenance plus SBOM
+  attestations for GHCR images.
+
+## [1.0.1] - 2026-08-30
+
 - Prepared repository, Pages, Action, GHCR, and package metadata URLs for the
   `fillbyte/docsmoke` ownership transfer without changing the established
   `docsmoke` distribution, import, or CLI names.

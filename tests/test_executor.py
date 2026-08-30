@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from docsmoke import __version__
 from docsmoke.executor import _coerce_output, _prepend_executable_dir, run_snippet
 from docsmoke.models import Snippet, SnippetDirectives, SnippetStatus
 
@@ -220,7 +221,7 @@ def test_executor_prepends_current_python_bin_to_path(tmp_path) -> None:
         language="bash",
         executor="sh",
         code="docsmoke --version",
-        directives=SnippetDirectives(expect_contains=("docsmoke 1.0.0",)),
+        directives=SnippetDirectives(expect_contains=(f"docsmoke {__version__}",)),
     )
 
     result = run_snippet(snippet, project_root=tmp_path, default_timeout=5.0)
