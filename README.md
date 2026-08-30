@@ -1,10 +1,10 @@
 # docsmoke
 
-[![CI](https://github.com/dev-ugurkontel/docsmoke/actions/workflows/ci.yml/badge.svg)](https://github.com/dev-ugurkontel/docsmoke/actions/workflows/ci.yml)
+[![CI](https://github.com/fillbyte/docsmoke/actions/workflows/ci.yml/badge.svg)](https://github.com/fillbyte/docsmoke/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/docsmoke.svg)](https://pypi.org/project/docsmoke/)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpypistats.org%2Fapi%2Fpackages%2Fdocsmoke%2Frecent&query=%24.data.last_month&label=downloads&suffix=%2Fmo&color=brightgreen)](https://pypistats.org/packages/docsmoke)
-[![Release](https://img.shields.io/github/v/release/dev-ugurkontel/docsmoke?label=release&color=blue)](https://github.com/dev-ugurkontel/docsmoke/releases)
-[![Last commit](https://img.shields.io/github/last-commit/dev-ugurkontel/docsmoke?color=green)](https://github.com/dev-ugurkontel/docsmoke/commits/main)
+[![Release](https://img.shields.io/github/v/release/fillbyte/docsmoke?label=release&color=blue)](https://github.com/fillbyte/docsmoke/releases)
+[![Last commit](https://img.shields.io/github/last-commit/fillbyte/docsmoke?color=green)](https://github.com/fillbyte/docsmoke/commits/main)
 [![Python](https://img.shields.io/pypi/pyversions/docsmoke.svg)](https://pypi.org/project/docsmoke/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Checked with mypy](https://img.shields.io/badge/mypy-strict-blue)](https://mypy.readthedocs.io/)
@@ -113,7 +113,7 @@ Use the moving `@v1` tag to receive compatible `1.x` fixes automatically, or
 pin an exact release such as `@v1.0.0` for fully reproducible workflow inputs.
 
 ```yaml
-- uses: dev-ugurkontel/docsmoke@v1
+- uses: fillbyte/docsmoke@v1
   with:
     paths: README.md docs examples
 ```
@@ -126,7 +126,7 @@ pin an exact release such as `@v1.0.0` for fully reproducible workflow inputs.
 
 ```bash
 docker run --rm -v "$PWD:/work" -w /work \
-    ghcr.io/dev-ugurkontel/docsmoke:latest scan README.md docs examples
+    ghcr.io/fillbyte/docsmoke:latest scan README.md docs examples
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line, or
@@ -143,9 +143,9 @@ Summary: total=1 passed=1 failed=0 skipped=0 errors=0
 
 ## Project Site
 
-- [Project landing page](https://dev-ugurkontel.github.io/docsmoke/)
+- [Project landing page](https://fillbyte.github.io/docsmoke/)
 - [PyPI package](https://pypi.org/project/docsmoke/)
-- [GitHub Releases](https://github.com/dev-ugurkontel/docsmoke/releases)
+- [GitHub Releases](https://github.com/fillbyte/docsmoke/releases)
 
 ## Documentation
 
@@ -157,6 +157,7 @@ Summary: total=1 passed=1 failed=0 skipped=0 errors=0
 - [docs/REPORT_SCHEMA.md](docs/REPORT_SCHEMA.md): JSON report contract
 - [docs/RELEASE.md](docs/RELEASE.md): release and tag-management process
 - [docs/REPOSITORY.md](docs/REPOSITORY.md): repository settings checklist
+- [docs/TRANSFER_TO_FILLBYTE.md](docs/TRANSFER_TO_FILLBYTE.md): one-time GitHub and PyPI ownership migration
 - [CONTRIBUTING.md](CONTRIBUTING.md): contribution workflow
 - [SECURITY.md](SECURITY.md): private vulnerability disclosure
 - [SUPPORT.md](SUPPORT.md): usage help and issue routing

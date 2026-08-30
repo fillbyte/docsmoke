@@ -107,7 +107,7 @@ released tool and action together:
 
 ```yaml
 - name: Validate docs
-  uses: dev-ugurkontel/docsmoke@v1
+  uses: fillbyte/docsmoke@v1
   with:
     paths: README.md docs examples
 ```

@@ -24,7 +24,7 @@ The repository ships a reusable action at the repo root:
 
 ```yaml
 - name: Validate executable docs
-  uses: dev-ugurkontel/docsmoke@v1
+  uses: fillbyte/docsmoke@v1
   with:
     paths: README.md docs examples
 ```
@@ -108,7 +108,7 @@ installation:
 
 ```bash
 docker run --rm -v "$PWD:/work" -w /work \
-    ghcr.io/dev-ugurkontel/docsmoke:1.0.0 scan README.md docs examples
+    ghcr.io/fillbyte/docsmoke:1.0.0 scan README.md docs examples
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line, or

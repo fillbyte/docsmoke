@@ -26,7 +26,7 @@ pip install docsmoke
 ## From source
 
 ```bash
-git clone https://github.com/dev-ugurkontel/docsmoke.git
+git clone https://github.com/fillbyte/docsmoke.git
 cd docsmoke
 make install PYTHON=python3.11
 make all
@@ -42,9 +42,9 @@ docker run --rm -v "$PWD:/work" -w /work docsmoke:local scan README.md docs
 Tagged releases publish GHCR images:
 
 ```bash
-docker pull ghcr.io/dev-ugurkontel/docsmoke:latest
+docker pull ghcr.io/fillbyte/docsmoke:latest
 docker run --rm -v "$PWD:/work" -w /work \
-    ghcr.io/dev-ugurkontel/docsmoke:1.0.0 scan README.md docs examples
+    ghcr.io/fillbyte/docsmoke:1.0.0 scan README.md docs examples
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line,
@@ -54,7 +54,7 @@ or `:1.0.0` for a fully pinned container.
 
 ```yaml
 - name: Validate executable docs
-  uses: dev-ugurkontel/docsmoke@v1
+  uses: fillbyte/docsmoke@v1
   with:
     paths: README.md docs examples
 ```

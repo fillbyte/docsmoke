@@ -3,6 +3,12 @@
 This document describes how `docsmoke` releases are managed across PyPI,
 GitHub Releases, GHCR, and the reusable GitHub Action.
 
+The canonical distribution, import package, and CLI name are all `docsmoke`.
+`doc-smoke` is a different normalized PyPI project name and is not a supported
+alias. Repository transfers must follow
+[`TRANSFER_TO_FILLBYTE.md`](TRANSFER_TO_FILLBYTE.md) before a release tag is
+pushed.
+
 ## Version identifiers
 
 `docsmoke` uses two related but different versioning surfaces:
@@ -19,10 +25,10 @@ to the same release commit. Users can choose:
 
 ```yaml
 # Gets compatible bug fixes on the 1.x line automatically.
-uses: dev-ugurkontel/docsmoke@v1
+uses: fillbyte/docsmoke@v1
 
 # Pins the exact action release for maximum reproducibility.
-uses: dev-ugurkontel/docsmoke@v1.0.0
+uses: fillbyte/docsmoke@v1.0.0
 ```
 
 This follows GitHub's documented action-maintenance guidance: create
@@ -60,7 +66,7 @@ Each tagged release publishes four surfaces:
 - **GHCR**: container tags for `latest`, major, major/minor, and exact
   version, for example `latest`, `1`, `1.0`, and `1.0.0`.
 - **GitHub Action**: the repository root `action.yml`, consumed through
-  `uses: dev-ugurkontel/docsmoke@...`.
+  `uses: fillbyte/docsmoke@...`.
 
 GitHub Packages may show the GHCR image after the first successful container
 release. PyPI packages do not appear in GitHub's Packages panel because PyPI is
@@ -97,6 +103,10 @@ publish job can proceed. This is intentional. GitHub Actions cannot
 approve pull request reviews in this repository, and auto-merge is
 disabled.
 
+PyPI Trusted Publishing must authorize GitHub owner `fillbyte`, repository
+`docsmoke`, workflow `release.yml`, and environment `pypi`. A repository
+transfer does not update that external trust relationship automatically.
+
 ## Release steps
 
 1. Update `pyproject.toml` with the new version.
@@ -115,6 +125,10 @@ disabled.
 7. Confirm the release workflow completed successfully.
 8. Confirm PyPI, GitHub Release assets, GHCR tags, and the major action
    tag.
+
+Publishing PyPI and GHCR is a prerequisite for creating the GitHub Release and
+moving the major action tag. This prevents a failed registry publication from
+advertising a partially released version through `v1`.
 
 The release workflow updates the major action tag automatically:
 

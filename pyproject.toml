@@ -60,13 +60,13 @@ dev = [
 docsmoke = "docsmoke.cli:app"
 
 [project.urls]
-Homepage = "https://dev-ugurkontel.github.io/docsmoke/"
-Repository = "https://github.com/dev-ugurkontel/docsmoke"
-Issues = "https://github.com/dev-ugurkontel/docsmoke/issues"
-Documentation = "https://dev-ugurkontel.github.io/docsmoke/"
-Discussions = "https://github.com/dev-ugurkontel/docsmoke/discussions"
-Support = "https://github.com/dev-ugurkontel/docsmoke/blob/main/SUPPORT.md"
-Changelog = "https://github.com/dev-ugurkontel/docsmoke/blob/main/CHANGELOG.md"
+Homepage = "https://fillbyte.github.io/docsmoke/"
+Repository = "https://github.com/fillbyte/docsmoke"
+Issues = "https://github.com/fillbyte/docsmoke/issues"
+Documentation = "https://fillbyte.github.io/docsmoke/"
+Discussions = "https://github.com/fillbyte/docsmoke/discussions"
+Support = "https://github.com/fillbyte/docsmoke/blob/main/SUPPORT.md"
+Changelog = "https://github.com/fillbyte/docsmoke/blob/main/CHANGELOG.md"
 Funding = "https://github.com/sponsors/dev-ugurkontel"
 
 [tool.hatch.build.targets.wheel]
