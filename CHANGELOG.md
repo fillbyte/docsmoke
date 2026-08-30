@@ -7,6 +7,14 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-08-30
+
+- Updated the builder and runtime container base to Python 3.14.7 slim.
+- Updated the pinned checkout, Sigstore signing, Docker build, metadata, and
+  registry login actions to their current stable releases.
+- Revalidated the full Python matrix, distribution build, container build,
+  workflow lint, and CodeQL analyses after each dependency update.
+
 ## [1.0.2] - 2026-08-30
 
 - Updated the pinned PyPI publisher action to support Core Metadata 2.5.
