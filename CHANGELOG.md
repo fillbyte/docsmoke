@@ -7,6 +7,8 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-08-30
+
 - Publish native `linux/amd64` and `linux/arm64` GHCR images so release tags
   run directly on both x86-64 Linux and Apple Silicon container hosts.
 
