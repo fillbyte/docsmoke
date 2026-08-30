@@ -7,6 +7,8 @@ Versioning.
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-08-30
+
 - Publish the JSON report schema at its canonical Pages `$id` and verify the
   assembled Pages artifact before deployment.
 - Document the intentionally unfilled publication gap for the superseded

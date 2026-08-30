@@ -87,7 +87,7 @@ Baseline labels expected by issue templates:
 
 ## Release tags
 
-- Exact package/action tags use `vMAJOR.MINOR.PATCH`, for example `v1.0.4`
+- Exact package/action tags use `vMAJOR.MINOR.PATCH`, for example `v1.0.5`
 - Moving action tags use `vMAJOR`, for example `v1`
 - Exact release tags should be immutable after a successful release
 - Moving action tags are force-updated by release automation
