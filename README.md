@@ -132,6 +132,9 @@ docker run --rm -v "$PWD:/work" -w /work \
 Use `:latest` for convenience, `:1` for the moving stable major line, or
 `:1.0.3` for a fully pinned container.
 
+Published images include native `linux/amd64` and `linux/arm64` manifests, so
+the same tags run on x86-64 Linux and Apple Silicon container hosts.
+
 ## Sample Output
 
 ```text

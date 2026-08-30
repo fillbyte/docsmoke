@@ -50,6 +50,9 @@ docker run --rm -v "$PWD:/work" -w /work \
 Use `:latest` for convenience, `:1` for the moving stable major line,
 or `:1.0.3` for a fully pinned container.
 
+Release tags publish native `linux/amd64` and `linux/arm64` images. Docker
+therefore selects an Apple Silicon-compatible image without x86 emulation.
+
 ## GitHub Action
 
 ```yaml
