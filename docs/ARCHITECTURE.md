@@ -48,3 +48,6 @@ The release workflow builds the Python distributions once, generates a
 CycloneDX SBOM, signs the distributions with Sigstore, publishes GHCR
 tags, publishes to PyPI through Trusted Publishing, and updates the
 moving `v1` action tag.
+
+GHCR releases use QEMU and Buildx to publish native `linux/amd64` and
+`linux/arm64` manifests with provenance and SBOM attestations.

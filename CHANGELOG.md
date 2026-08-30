@@ -7,6 +7,9 @@ Versioning.
 
 ## [Unreleased]
 
+- Publish native `linux/amd64` and `linux/arm64` GHCR images so release tags
+  run directly on both x86-64 Linux and Apple Silicon container hosts.
+
 ## [1.0.3] - 2026-08-30
 
 - Updated the builder and runtime container base to Python 3.14.7 slim.
