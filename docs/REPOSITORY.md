@@ -3,9 +3,7 @@
 This checklist captures the GitHub settings that cannot be enforced from the
 source tree alone. Keep it in sync with branch rules and release automation.
 
-The canonical repository is `fillbyte/docsmoke`. For the one-time transfer
-sequence and external verification gates, see
-[`TRANSFER_TO_FILLBYTE.md`](TRANSFER_TO_FILLBYTE.md).
+The canonical repository is `fillbyte/docsmoke`.
 
 ## General
 
