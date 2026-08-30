@@ -12,6 +12,9 @@
 
 Executable documentation smoke tests for Markdown.
 
+`docsmoke` is maintained by [Fillbyte](https://github.com/fillbyte) as part of
+its open-source developer tooling.
+
 `docsmoke` runs the shell and Python examples you mark in `README.md`,
 `docs/`, and onboarding guides, then fails CI when those examples stop
 matching reality. It is intentionally small: opt-in fenced blocks,
