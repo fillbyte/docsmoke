@@ -47,7 +47,7 @@ jobs:
   docsmoke:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Install docsmoke
         run: python -m pip install docsmoke==1.0.3
       - name: Scan docs

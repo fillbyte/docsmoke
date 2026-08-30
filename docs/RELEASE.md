@@ -94,8 +94,8 @@ Changes to `main` go through a pull request. The branch rules require:
 
 - one approving review
 - code owner review
-- required status checks for Python 3.10, 3.11, 3.12, 3.13, and build
-  distribution
+- required status checks for Python 3.10, 3.11, 3.12, 3.13, 3.14,
+  distribution build, and container image build
 - linear history and squash merges
 
 The `pypi` environment requires maintainer approval before the PyPI
