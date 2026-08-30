@@ -110,7 +110,7 @@ Supported directives:
 ## GitHub Action
 
 Use the moving `@v1` tag to receive compatible `1.x` fixes automatically, or
-pin an exact release such as `@v1.0.1` for fully reproducible workflow inputs.
+pin an exact release such as `@v1.0.2` for fully reproducible workflow inputs.
 
 ```yaml
 - uses: fillbyte/docsmoke@v1
@@ -130,7 +130,7 @@ docker run --rm -v "$PWD:/work" -w /work \
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line, or
-`:1.0.1` for a fully pinned container.
+`:1.0.2` for a fully pinned container.
 
 ## Sample Output
 
