@@ -160,7 +160,6 @@ Summary: total=1 passed=1 failed=0 skipped=0 errors=0
 - [docs/REPORT_SCHEMA.md](docs/REPORT_SCHEMA.md): JSON report contract
 - [docs/RELEASE.md](docs/RELEASE.md): release and tag-management process
 - [docs/REPOSITORY.md](docs/REPOSITORY.md): repository settings checklist
-- [docs/TRANSFER_TO_FILLBYTE.md](docs/TRANSFER_TO_FILLBYTE.md): one-time GitHub and PyPI ownership migration
 - [CONTRIBUTING.md](CONTRIBUTING.md): contribution workflow
 - [SECURITY.md](SECURITY.md): private vulnerability disclosure
 - [SUPPORT.md](SUPPORT.md): usage help and issue routing

@@ -5,9 +5,7 @@ GitHub Releases, GHCR, and the reusable GitHub Action.
 
 The canonical distribution, import package, and CLI name are all `docsmoke`.
 `doc-smoke` is a different normalized PyPI project name and is not a supported
-alias. Repository transfers must follow
-[`TRANSFER_TO_FILLBYTE.md`](TRANSFER_TO_FILLBYTE.md) before a release tag is
-pushed.
+alias.
 
 ## Version identifiers
 
@@ -104,8 +102,9 @@ approve pull request reviews in this repository, and auto-merge is
 disabled.
 
 PyPI Trusted Publishing must authorize GitHub owner `fillbyte`, repository
-`docsmoke`, workflow `release.yml`, and environment `pypi`. A repository
-transfer does not update that external trust relationship automatically.
+`docsmoke`, workflow `release.yml`, and environment `pypi`. Any future change
+to that owner, repository, workflow, or environment must also update the
+external PyPI trust relationship.
 
 ## Release steps
 
