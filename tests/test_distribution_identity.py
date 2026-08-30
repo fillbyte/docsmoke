@@ -28,6 +28,15 @@ def test_distribution_links_target_the_canonical_organization_repository() -> No
     assert urls["Documentation"] == "https://fillbyte.github.io/docsmoke/"
 
 
+def test_distribution_uses_pep_639_license_metadata() -> None:
+    metadata = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+    project = metadata["project"]
+
+    assert project["license"] == "Apache-2.0"
+    assert project["license-files"] == ["LICENSE", "NOTICE"]
+    assert "License :: OSI Approved :: Apache Software License" not in project["classifiers"]
+
+
 def test_release_publishes_pinned_multi_arch_container_images() -> None:
     workflow = (ROOT / ".github" / "workflows" / "release.yml").read_text(encoding="utf-8")
     ci_workflow = (ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
