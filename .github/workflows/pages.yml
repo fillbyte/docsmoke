@@ -29,10 +29,23 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
+      - name: Assemble and validate Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/schemas
+          cp -R docs/site/. _site/
+          cp schemas/report.schema.json _site/schemas/report.schema.json
+          cmp --silent schemas/report.schema.json _site/schemas/report.schema.json
+          jq --exit-status \
+            --arg canonical_id "https://fillbyte.github.io/docsmoke/schemas/report.schema.json" \
+            '.["$id"] == $canonical_id' \
+            _site/schemas/report.schema.json >/dev/null
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: docs/site
+          path: _site
 
   deploy:
     name: Deploy Pages site

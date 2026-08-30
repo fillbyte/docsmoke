@@ -7,6 +7,11 @@ Versioning.
 
 ## [Unreleased]
 
+- Publish the JSON report schema at its canonical Pages `$id` and verify the
+  assembled Pages artifact before deployment.
+- Document the intentionally unfilled publication gap for the superseded
+  `v1.0.1` release.
+
 ## [1.0.4] - 2026-08-30
 
 - Publish native `linux/amd64` and `linux/arm64` GHCR images so release tags
@@ -27,6 +32,11 @@ Versioning.
   attestations for GHCR images.
 
 ## [1.0.1] - 2026-08-30
+
+> **Publication history:** the `v1.0.1` Git tag and GHCR image were published,
+> but the PyPI upload failed and the GitHub Release was therefore not created.
+> The complete `v1.0.2` release superseded it. Version `1.0.1` will not be
+> backfilled to PyPI or GitHub Releases.
 
 - Prepared repository, Pages, Action, GHCR, and package metadata URLs for the
   `fillbyte/docsmoke` ownership transfer without changing the established

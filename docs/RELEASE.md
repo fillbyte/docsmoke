@@ -141,6 +141,17 @@ tag. Exact tags such as `v1.0.4` should only be moved to recover from a
 failed release before users depend on it; normal releases should create
 a new exact tag.
 
+## Historical partial release: v1.0.1
+
+The `v1.0.1` workflow published the Git tag and GHCR image, but its PyPI
+Trusted Publishing step failed. Because PyPI publishing is a prerequisite for
+the final release job, no `v1.0.1` GitHub Release or signed release assets were
+created. The complete `v1.0.2` release superseded it.
+
+This is preserved as release history, not repaired by publishing old artifacts
+after the fact. Do not backfill `1.0.1` to PyPI or create a retrospective
+GitHub Release. Consumers should use `1.0.2` or newer.
+
 ## Failure recovery
 
 If the release workflow fails after an exact tag has been pushed:
