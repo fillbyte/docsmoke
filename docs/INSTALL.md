@@ -12,7 +12,7 @@ docsmoke --help
 Use an exact pin when you need reproducible local or CI installs:
 
 ```bash
-pipx install docsmoke==1.0.0
+pipx install docsmoke==1.0.1
 ```
 
 ## Inside a virtual environment
@@ -44,11 +44,11 @@ Tagged releases publish GHCR images:
 ```bash
 docker pull ghcr.io/fillbyte/docsmoke:latest
 docker run --rm -v "$PWD:/work" -w /work \
-    ghcr.io/fillbyte/docsmoke:1.0.0 scan README.md docs examples
+    ghcr.io/fillbyte/docsmoke:1.0.1 scan README.md docs examples
 ```
 
 Use `:latest` for convenience, `:1` for the moving stable major line,
-or `:1.0.0` for a fully pinned container.
+or `:1.0.1` for a fully pinned container.
 
 ## GitHub Action
 
@@ -60,7 +60,7 @@ or `:1.0.0` for a fully pinned container.
 ```
 
 Use `@v1` for compatible fixes on the `1.x` action line or
-`@v1.0.0` for an exact action revision.
+`@v1.0.1` for an exact action revision.
 
 ## macOS note
 
