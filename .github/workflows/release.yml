@@ -6,9 +6,7 @@ on:
       - "v*.*.*"
 
 permissions:
-  contents: write
-  packages: write
-  id-token: write
+  contents: read
 
 # Actions are pinned to immutable commit SHAs per GitHub's security
 # hardening guidance. Comments retain the human-readable upstream
@@ -28,10 +26,13 @@ jobs:
 
       - name: Install build tooling
         run: |
-          python -m pip install --upgrade pip build cyclonedx-bom
+          python -m pip install --upgrade pip build cyclonedx-bom twine
 
       - name: Build wheel and sdist
         run: python -m build
+
+      - name: Validate distribution metadata and long description
+        run: python -m twine check dist/*
 
       - name: Generate CycloneDX SBOM
         run: |
@@ -52,6 +53,8 @@ jobs:
     environment:
       name: pypi
       url: https://pypi.org/p/docsmoke
+    permissions:
+      id-token: write
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
@@ -109,9 +112,12 @@ jobs:
 
   sign-and-release:
     name: Sign artifacts and create GitHub Release
-    needs: build
+    needs: [build, publish-pypi, publish-ghcr]
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 

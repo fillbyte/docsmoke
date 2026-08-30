@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability (private)
-    url: https://github.com/dev-ugurkontel/docsmoke/security/advisories/new
+    url: https://github.com/fillbyte/docsmoke/security/advisories/new
     about: For vulnerabilities in docsmoke itself, please report privately.
   - name: Discussions
-    url: https://github.com/dev-ugurkontel/docsmoke/discussions
+    url: https://github.com/fillbyte/docsmoke/discussions
     about: Ask questions and share ideas.

@@ -4,7 +4,7 @@ If you believe you have found a security issue in `docsmoke`, please do not
 open a public issue. Instead, report it privately through GitHub Security
 Advisories:
 
-<https://github.com/dev-ugurkontel/docsmoke/security/advisories/new>
+<https://github.com/fillbyte/docsmoke/security/advisories/new>
 
 Please include:
 

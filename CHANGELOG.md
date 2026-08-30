@@ -7,6 +7,12 @@ Versioning.
 
 ## [Unreleased]
 
+- Prepared repository, Pages, Action, GHCR, and package metadata URLs for the
+  `fillbyte/docsmoke` ownership transfer without changing the established
+  `docsmoke` distribution, import, or CLI names.
+- Added a verified GitHub/PyPI transfer runbook, narrowed release-job
+  permissions, validated distributions with Twine, and prevented moving the
+  public release/action tag before PyPI and GHCR publishing succeed.
 - Expanded README, installation, usage, architecture, and repository docs to
   match the release/documentation quality bar of `surface-audit`.
 - Added practical CI, Docker, gradual-adoption, and JSON-consumer recipes.

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dev-ugurkontel.github.io/docsmoke/schemas/report.schema.json",
+  "$id": "https://fillbyte.github.io/docsmoke/schemas/report.schema.json",
   "title": "docsmoke JSON report",
   "type": "object",
   "additionalProperties": false,
